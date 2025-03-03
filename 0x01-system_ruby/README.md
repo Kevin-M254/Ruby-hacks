@@ -1,0 +1,1 @@
+building stand-alone applications
