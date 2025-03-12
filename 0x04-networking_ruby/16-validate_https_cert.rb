@@ -3,11 +3,9 @@
 #certificate validation
 
 require 'open-uri'
-require 'uri'
-require 'openssl'
 
 def validate_https_cert(target) begin
-    open("https://www.#{target}")
+    URI.open("https://www.#{target}")
     puts '[+] Valid SSL Certificate!'
   rescue OpenSSL::SSL::SSLError
     puts '[+] Invalid SSL Certificate'
